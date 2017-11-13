@@ -22,6 +22,7 @@
             margin-bottom: 1em;
             box-shadow: 0 1px 5px #999;
             transition: 0.8s;
+            opacity: 1
         }
         .card:hover {
             min-width: 20em;
@@ -34,6 +35,50 @@
         .nobrdr{
             border: none !important
         }
+        
+.notes {
+    margin: 0 auto
+}
+.note {
+    -webkit-transition: box-shadow .5s;
+    transition: box-shadow .5s;
+    cursor: default
+}
+
+.note h1,
+.note pre {
+    font-size: 1.1em;
+    word-wrap: break-word
+}
+.note pre {
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    font-family: inherit
+}
+.note button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    opacity: 0;
+    cursor: pointer;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+    margin: 0 4px 0 0
+}
+
+.note:focus,
+.note:hover {
+    box-shadow: 0 2px 10px #999
+}
+.note:focus button,
+.note:hover button {
+    opacity: .7
+}
+.note button:focus,
+.note button:hover {
+    opacity: 1
+}
+       
 
     </style>
 </head>
@@ -191,15 +236,15 @@
             </div>
             <div class="row" style="padding-right: 1em">
 
-                <div class="card text-white bg-warning col-md col-sm-12" data-toggle="modal" data-target="#updateNote">
+                <div class="card note text-white bg-warning col-md col-sm-12" data-toggle="modal" data-target="#updateNote">
                     <div class="card-header">Header</div>
                     <div class="card-body">
                         <h4 class="card-title">Primary card title</h4>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <button type="button" class="btn btn-outline-dark" style="float: right"><i class="fa fa-trash"></i> Delete</button>
+                        <button type="button" class="btn btn-outline-dark btn-sm delete" style="float: right"><i class="fa fa-trash"></i> Delete</button>
                     </div>
                 </div>
-                <div class="card text-white bg-warning col-md col-sm-12" data-toggle="modal" data-target="#updateNote">
+                <div class="card note text-white bg-warning col-md col-sm-12" data-toggle="modal" data-target="#updateNote">
                     <div class="card-header">Header</div>
                     <div class="card-body">
                         <h4 class="card-title">Primary card title</h4>
