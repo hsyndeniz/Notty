@@ -18,6 +18,10 @@
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
@@ -279,5 +283,14 @@
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
 <!-- Material Dashboard javascript methods -->
 <script src="{% static 'assets/js/material-dashboard.js ' %}"></script>
+
+  <script src="{% static 'ckeditor/ckeditor.js' %}"></script>
+
+    <script>
+        CKEDITOR.replace('editor');
+        CKEDITOR.config.skin = 'bootstrapck'
+
+
+    </script>
 
 </html>

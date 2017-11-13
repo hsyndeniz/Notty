@@ -18,10 +18,17 @@
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet"
+      href="{% static 'hljs/styles/atom-one-light.css' %}">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
     <style>
         .card-body{
-            max-height:300px;
+            max-height:205px;
             overflow:hidden;
+        }
+        code{
+            background-color: #16a085;
         }
         #notex{
             transition: 0.8s;
@@ -238,7 +245,7 @@
 
                                 </div>
                                 <div class="modal-body">
-                                    <pre><code>{{ note.content }}</code></pre>
+                                    <pre><code class="html">{{ note.content }}</code></pre>
 
                                 </div>
                                 <div class="modal-footer" style="padding-right:25px; padding-bottom:15px; margin-bottom:-50px">
